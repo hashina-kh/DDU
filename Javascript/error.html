@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <button onclick="funname()">click here</button>
+    <script>
+        function funname(){
+            try{
+                var num=prompt("enter the number");
+                document.getElementById("demo").innerHTML=num**2;
+                if(num=="")throw prompt("please enter a number");
+                if(num==2)throw"don't accept2";
+                if(isNun(num))throw"please enter a number";
+            }
+            catch(err){
+                document.getElementById("demo").innerHTML=error;
+
+            }
+        }
+    </script>
+</body>
+</html>

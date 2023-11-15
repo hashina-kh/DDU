@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <select name="Qualification" id="educ">
+            <option value="">Select</option>
+            <option value="bsc">BSC</option>
+            <option value="b.voc">B.VOC</option>
+            <option value="b.tech">B.Tech</option>
+        </select>
+
+        <select name="bsc" id="bsc">
+            <option value="">select</option>
+            <option value="maths">Maths</option>
+            <option value="chem">Chemistry</option>
+            <option value="phy">Physics</option>
+        </select>
+
+        <select name="bvc" id="bvc">
+            <option value="">select</option>
+            <option value="maths">Agriculture</option>
+            <option value="chem">Software Development</option>
+            <option value="phy">BFSI</option>
+        </select>
+        <select name="btech" id="btech">
+            <option value="">select</option>
+            <option value="maths">Mechanical</option>
+            <option value="chem">Electrical</option>
+            <option value="phy">Civil</option>
+        </select>
+    </form>
+    <script>
+        window.onload=function(){
+            document.getElementById('bsc').style.display="none";
+            document.getElementById('bvc').style.display="none";
+            document.getElementById('btech').style.display="none";
+
+            document.getElementById('educ').addEventListener("change",funname);
+            function funname(){
+                let a=document.getElementById('educ').value;
+                if(a=="bsc"){
+                    document.getElementById('bsc').style.display="block";
+                }else{
+                    document.getElementById('bsc').style.display="none";
+                }
+                if(a=="b.voc"){
+                    document.getElementById('bvc').style.display="block";
+                }else{
+                    document.getElementById('bvc').style.display="none";
+                }
+                if(a=="b.tech"){
+                    document.getElementById('btech').style.display="block";
+
+                }else{
+                    document.getElementById('btech').style.display="none";
+                }
+                
+               
+            }
+        }
+    </script>
+</body>
+</html>

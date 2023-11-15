@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter a number and Click Ok:</p>
+    <input id="button" type="number" min="100" max="300" required>
+    <button onclick="funname()">OK</button>
+    <p id="main"></p>
+    <script>
+        function funname(){
+            const input=document.getElementById("button");
+            if(!input.checkValidity()){
+                document.getElementById("main").innerHTML=input.validationMessage;
+            }
+            else{
+                document.getElementById("main").innerHTML="Input Okay";
+            }
+        }
+    </script>
+</body>
+</html>

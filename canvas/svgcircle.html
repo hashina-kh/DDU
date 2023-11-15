@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            display: flex;
+            justify-content:flex-end;
+            margin-right: -200px;
+
+        }
+        
+        /* svg{
+            background-color: rgb(197, 252, 255);
+        } */
+       .move{
+         position: relative;
+         animation-name: moves;
+         animation-duration: 4s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+       }
+       @keyframes moves{
+        0%{
+            right: 0px;
+            top: 0px;
+        }
+        50%{}
+        100%{
+            right: 1200px;
+            top: 0px;
+        }
+       }
+       .tire{
+        position: absolute;
+
+        animation: wheel 1s linear infinite;
+        
+       }
+       @keyframes wheel{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg height="500px" width="700px"  class="move">
+        <ellipse cx="380px" cy="193px" rx="180px" ry="95px" stroke="black" stroke-width="5px" fill="white"/>
+        <rect x="100" y="250" width="400px" height="100px" style="fill: rgb(81, 41, 41); stroke-width:3; stroke:rgb(0,0,0)"/>
+        <rect x="100"  y="130"  width="100px" height="150px" style="fill: rgb(56, 54, 54); stroke-width:3; stroke:rgb(8, 8, 8); opacity:0.8"/>
+        <rect x="100" y="150" rx="10" width="70px" height="100px" style="fill: rgb(165, 154, 154); stroke-width:3; stroke:rgb(8, 8, 8)"/>
+       
+        <circle cx="130px" cy="180px" r="20px" stroke="black" fill="white"/>
+        <line x1="130" y1="200" x2="132" y2="250" style="stroke:rgb(18, 16, 16);stroke-width:2"/>
+        <line x1="132" y1="200" x2="150" y2="240" style="stroke:rgb(18, 16, 16);stroke-width:2"/>
+        <circle cx="180px" cy="350px" r="30px" stroke-width="20px" stroke="black" fill="grey" class="tire"/>
+        <circle cx="430px" cy="350px" r="30px" stroke-width="20px" stroke="red" fill="grey" class="tire"/>
+
+        <circle cx="370px" cy="350px" r="30px" stroke-width="20px" stroke="black" fill="grey"/>
+        <rect x="0"  y="500"  width="1000%" height="100px" style="fill: rgb(56, 54, 54); stroke-width:3; stroke:rgb(8, 8, 8); opacity:0.8"/>
+        <!-- <img src="C:/Users/hashi/Downloads/driver.jpg" height="100" width="80" id="image"> -->
+        
+        
+        
+    </svg>
+    
+</body>
+</html>

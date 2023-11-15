@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                background-color: aliceblue;
+                display: flex;
+                justify-content: left;
+                
+            }
+            #move{
+                position: relative;
+                /* margin-left: -200px; */
+                animation-name: moves;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-direction: initial;
+            }
+            @keyframes moves{
+                0%{
+            left: 0px;
+            top: 0px;
+        }
+        /* 50%{} */
+        100%{
+            left: 2000px;
+            top: 0px;
+        }
+            }
+        </style>
+    </head>
+    <body>
+        <svg width="900px" height="900px" id="move">
+           
+            <rect x="100" y="300" rx="10" width="700px" height="200px" style="fill: rgb(56, 127, 51); stroke-width:3; stroke:rgb(8, 8, 8)"/>
+            <rect x="120" y="350"  width="50px" height="70px" style="fill: rgb(86, 88, 87); stroke-width: 3; stroke: rgb(8, 8, 8);"/>
+            <rect x="190" y="350"  width="50px" height="70px" style="fill: rgb(89, 90, 89); stroke-width: 3; stroke: rgb(8, 8, 8);"/>
+            <rect x="260" y="350"  width="50px" height="70px" style="fill: rgb(86, 88, 87); stroke-width: 3; stroke: rgb(8, 8, 8);"/>
+            <rect x="340" y="350"  width="50px" height="70px" style="fill: rgb(86, 88, 87); stroke-width: 3; stroke: rgb(11, 11, 11);"/>
+            <rect x="410" y="350"  width="50px" height="70px" style="fill: rgb(86, 88, 87); stroke-width: 3; stroke: rgb(11, 11, 11);"/>
+            <rect x="480" y="350"  width="50px" height="70px" style="fill: rgb(86, 88, 87); stroke-width: 3; stroke: rgb(11, 11, 11);"/>
+            <rect x="560" y="350"  width="50px" height="70px" style="fill: rgb(86, 88, 87); stroke-width: 3; stroke: rgb(11, 11, 11);"/>
+            <rect x="640" y="350"  width="50px" height="70px" style="fill: rgb(86, 88, 87); stroke-width: 3; stroke: rgb(11, 11, 11);"/>
+            <rect x="750" y="300" rx="-10" width="300px" height="200px" style="fill: rgb(105, 106, 104); stroke-width:3; stroke:rgb(8, 8, 8)"/>
+            <rect x="800" y="310" ry="-10" width="150px" height="120px" style="fill: rgb(105, 106, 104); stroke-width:3; stroke:rgb(8, 8, 8)"/>
+
+            <circle cx="280px" cy="520px" r="25px" stroke-width="20px" stroke="black" fill="grey"/>
+            <circle cx="340px" cy="520px" r="25px" stroke-width="20px" stroke="black" fill="grey"/>
+            <circle cx="150px" cy="520px" r="25px" stroke-width="20px" stroke="black" fill="grey"/>
+            <circle cx="200px" cy="520px" r="25px" stroke-width="20px" stroke="black" fill="grey"/>
+            <circle cx="420px" cy="520px" r="25px" stroke-width="20px" stroke="black" fill="grey"/>
+            <circle cx="480px" cy="520px" r="25px" stroke-width="20px" stroke="black" fill="grey"/>
+            <circle cx="560px" cy="520px" r="25px" stroke-width="20px" stroke="black" fill="grey"/>
+            <circle cx="620px" cy="520px" r="25px" stroke-width="20px" stroke="black" fill="grey"/>
+            <circle cx="700px" cy="520px" r="25px" stroke-width="20px" stroke="black" fill="grey"/>
+            <circle cx="760px" cy="520px" r="25px" stroke-width="20px" stroke="black" fill="grey"/>
+
+
+        </svg>
+    </body>
+    </html>
+</body>
+</html>

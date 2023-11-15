@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Enter a number</label>
+        <input type="number" id="num"><br>
+        <input type="login" value="Click Hear" onclick="prime()">
+        <h1 id="class"></h1>
+    </form>
+    <script>
+        function prime(){
+            let j,i;
+            f=0;
+            j=parseInt(document.getElementById('class').value);
+
+            for(i=2;i<j;i++){
+                if(j%i==0){
+                    f=1;
+                }
+            }
+        if(f==1){
+            document.getElementById("class").innerHTML="it is not prime number";
+        }else{
+            document.getElementById("class").innerHTML="it is prime number";
+           }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="funname()">
+    <canvas height="600px" width="1500px" style="border: 2px solid blueviolet;" id="canvas">
+
+    </canvas>
+    <script>
+        function funname(){
+            var mycanvas=document.getElementById('canvas');
+            var context=mycanvas.getContext('2d');
+
+
+            context.fillRect(90,200,250,250);
+            context.clearRect(130,250,110,190);
+            context.clearRect(270,260,50,60);
+            context.strokeRect(275,270, 35, 45);
+
+
+            context.beginPath();
+            context.moveTo(50, 200);
+            context.lineTo(215, 100);
+            context.lineTo(380, 200);
+           
+            context.closePath();
+            context.fillStyle ="brown";
+            context.fill();
+
+            context.beginPath();
+            context.moveTo(215, 100);
+            context.lineTo(500, 100);
+            context.lineTo(380, 200);
+            context.fillStyle ="grey";
+            context.fill();
+    
+            context.beginPath();
+            context.moveTo(380, 200);
+            context.lineTo(500, 100);
+            context.lineTo(650, 200);
+            context.fillStyle ="grey";
+            context.closePath();
+            context.fill();
+
+            context.fillStyle="red";
+            context.fillRect(340,200,280,250);
+            context.clearRect(450,300,75,50);
+            context.strokeRect(458,310, 60, 35);
+           
+            context.fillStyle="grey";
+            context.fillRect(130,450,150,30);
+            context.fillRect(150,470,100,30);
+            
+            
+            // context.arc(150,150,100,Math.PI*2);
+            context.fillStyle="brown"
+            context.beginPath();
+            context.moveTo(130, 250);
+            context.lineTo(200, 300);
+
+            context.lineTo(200, 440);
+            context.lineTo(130,440)
+            context.closePath();
+            context.fill();
+           
+          
+        }
+    </script>
+</body>
+</html>

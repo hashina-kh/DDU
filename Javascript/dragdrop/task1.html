@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            /* display: grid; */
+            /* grid-gap:5px;
+            grid-template-columns: repeat(6,1fr); */
+        }
+        div{
+            border: 2px solid black;
+            width: 95px;
+            height: 95px;
+            float: left;
+        }
+        img{
+            width: 90px;
+            height: 100px;
+        }
+        .maindiv{
+            width: 765px;
+            height: 775px;
+        }
+        #chess1{
+            background-color: rgb(246, 227, 227);
+        }
+    </style>
+</head>
+<body>
+    <script>
+           function drag(even){
+        even.dataTransfer.setData("text",even.target.id);
+
+    }
+    function allowDrop(even){
+        even.preventDefault();
+    }
+    function drop(even){
+        even.preventDefault();
+        var fetchData=even.dataTransfer.getData("text");
+        even.target.appendChild(document.getElementById(fetchData));
+    }
+    </script>
+    <div class="maindiv">
+    <div id="chess" ondrop="drop(event)" ondragover="allowDrop(event)" >
+        <img src="C:/Users/hashi/Downloads/img14-removebg-preview.png" alt="img14-removebg-preview"draggable="true" ondragstart="drag(event)" id="1">
+
+    </div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"> <img src="C:/Users/hashi/Downloads/img17-removebg-preview.png" alt="img17-removebg-preview" draggable="true" ondragstart="drag(event)" id="2"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img5-removebg-preview.png" alt="img5-removebg-preview" draggable="true" ondragstart="drag(event)" id="3" ></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img12-removebg-preview.png" alt="img12-removebg-preview"draggable="true" ondragstart="drag(event)" id="4" ></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/kingbl-removebg-preview.png" alt="kingbl-removebg-preview"draggable="true" ondragstart="drag(event)" id="5" ></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img5-removebg-preview.png" alt="img5-removebg-preview"draggable="true" ondragstart="drag(event)" id="6" ></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img17-removebg-preview.png" alt="img17-removebg-preview"draggable="true" ondragstart="drag(event)" id="7" ></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img14-removebg-preview.png" alt="img14-removebg-preview" draggable="true" ondragstart="drag(event)" id="8"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/pawn-removebg-preview.png" alt="pawn-removebg-preview" draggable="true" ondragstart="drag(event)" id="9"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/pawn-removebg-preview.png" alt="pawn-removebg-preview"draggable="true" ondragstart="drag(event)" id="10" ></div>
+
+
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/pawn-removebg-preview.png" alt="pawn-removebg-preview" draggable="true" ondragstart="drag(event)" id="11" ></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/pawn-removebg-preview.png" alt="pawn-removebg-preview" draggable="true" ondragstart="drag(event)" id="12"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/pawn-removebg-preview.png" alt="pawn-removebg-preview" draggable="true" ondragstart="drag(event)" id="13"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/pawn-removebg-preview.png" alt="pawn-removebg-preview" draggable="true" ondragstart="drag(event)" id="14"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/pawn-removebg-preview.png" alt="pawn-removebg-preview" draggable="true" ondragstart="drag(event)" id="15"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/pawn-removebg-preview.png" alt="pawn-removebg-preview" draggable="true" ondragstart="drag(event)" id="16"> </div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+  
+
+
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+  
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+  
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img2-removebg-preview.png" alt="img2-removebg-preview"draggable="true" ondragstart="drag(event)" id="17"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img2-removebg-preview.png" alt="img2-removebg-preview"draggable="true" ondragstart="drag(event)" id="18"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img2-removebg-preview.png" alt="img2-removebg-preview"draggable="true" ondragstart="drag(event)" id="19"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img2-removebg-preview.png" alt="img2-removebg-preview"draggable="true" ondragstart="drag(event)" id="20"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img2-removebg-preview.png" alt="img2-removebg-preview"draggable="true" ondragstart="drag(event)" id="21"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img2-removebg-preview.png" alt="img2-removebg-preview"draggable="true" ondragstart="drag(event)" id="22"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img2-removebg-preview.png" alt="img2-removebg-preview"draggable="true" ondragstart="drag(event)" id="23"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img2-removebg-preview.png" alt="img2-removebg-preview"draggable="true" ondragstart="drag(event)" id="24"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img3-removebg-preview.png" alt="img3-removebg-preview"draggable="true" ondragstart="drag(event)" id="25"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/horsewhi-removebg-preview.png" alt="horsewhi-removebg-preview"draggable="true" ondragstart="drag(event)" id="26"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img4-removebg-preview.png" alt="img4-removebg-preview"draggable="true" ondragstart="drag(event)" id="27"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/queenwhi-removebg-preview.png" alt="queenwhi-removebg-preview"draggable="true" ondragstart="drag(event)" id="28"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img1-removebg-preview.png" alt="img1-removebg-preview"draggable="true" ondragstart="drag(event)" id="29"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img4-removebg-preview.png" alt="img4-removebg-preview"draggable="true" ondragstart="drag(event)" id="30"></div>
+    <div id="chess1" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/horsewhi-removebg-preview.png" alt="horsewhi-removebg-preview"draggable="true" ondragstart="drag(event)" id="31"></div>
+    <div id="chess2" ondrop="drop(event)"  ondragover="allowDrop(event)"><img src="C:/Users/hashi/Downloads/img3-removebg-preview.png" alt="img3-removebg-preview" draggable="true" ondragstart="drag(event)" id="32"></div>
+</div>
+</body>
+</html>

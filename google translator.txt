@@ -1,0 +1,26 @@
+ #chnge{
+            margin-top:-40px;
+            margin-left:700px;
+            
+            width:150px;
+            height:25px;
+            z-index:1;
+        }
+
+
+
+<script type="text/javascript"
+    src="http://translate.google.com/translate_a/element.js?cb=translate">
+    </script>
+
+
+
+ <div id="chnge"></div>
+         <script type="text/javascript">
+            function translate(){
+                new google.translate.TranslateElement(
+                    {pageLanguage:'',layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+                'chnge'
+                );
+            }
+            </script>

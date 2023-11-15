@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+     @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        0% {
+          transform: rotate(0deg);
+        }
+      }
+      .ceiling-fan {
+        background-color: #ff6d00;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        margin: 90px;
+        position: relative;
+        transform-origin: center;
+        animation: spin 0.5s linear infinite;
+      }
+      .ceiling-fan::before {
+        content: "";
+        position: absolute;
+        background-color: rgb(66, 52, 52);
+        height: 80px;
+        width: 40px;
+        border-radius: 50% 50% 50% 50% / 85% 85% 15% 15%;
+        top: 36px;
+      }
+      .ceiling-fan::after {
+        content: "";
+        position: absolute;
+        background-color: rgb(59, 47, 47);
+        height: 80px;
+        width: 40px;
+        border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+        top: -82px;
+      }
+     
+    </style>
+    <title>Salow Studios</title>
+  </head>
+  <body>
+    
+    <div class="ceiling-fan"></div>
+    
+  </body>
+</html>

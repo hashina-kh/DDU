@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button id="click1" onclick="function1()">Function 1</button>
+        <button id="click2" onclick="function2()">Function 2</button>
+        <p id="demo"></p>
+        <script>
+            function function1() {
+                let num = 1;
+                let result = "";
+                while (num <= 100) {
+                    // Display an alert for every 100 numbers
+                    if (num % 10 === 0) {
+                        alert("Reached " + num + " numbers.");
+                    }
+    
+                    // Append each number to the result
+                    result += " " + num;
+    
+                    // Increase num by 1
+                    num = num + 1;
+                }
+                // Update the content in the element after the loop
+                document.getElementById("demo").innerHTML = "Numbers are:" + result;
+    }
+    
+            function function2(){
+                let result = "";
+                let num = 1;
+                while(num<=10){
+                    // Append each number to the result
+                    result += " " + num;
+                    // Increase num by 1
+                    num = num + 1;
+                } 
+                document.getElementById("demo").innerHTML = "Numbers are:" + result;
+            }      
+        </script>
+   
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Pattern - javascript</title>
+</head>
+<body>
+    <h3 id="pattern1"></h3>
+    <h3 id="pattern2"></h3>
+    <h3 id="pattern3"></h3>
+    <h3 id="pattern4"></h3>
+    <h3 id="pattern5"></h3>
+    <h3 id="pattern6"></h3>
+    <h3 id="pattern7"></h3>
+    <h3 id="pattern8"></h3>
+    <h3 id="pattern9"></h3>
+    <h3 id="pattern10"></h3>
+    <h3 id="pattern11"></h3>
+    <h3 id="pattern12"></h3>
+
+    <script>
+        function sqPattern(a){
+            let string = "";
+            for (let i = 0; i < a; i++) {
+                for (let j = 0; j < a; j++) {
+                string += "*";
+                }
+                string += "<br>";
+            }
+            return string;
+        }
+        let a=5;
+        document.getElementById("pattern1").innerHTML="1. Square pattern in javascript"+"<br>"+sqPattern(a);
+
+        function hSqPattern(b){
+            // defining an empty string
+            let string = "";
+            for (let i = 0; i < b; i++) { // external loop
+            for (let j = 0; j < b; j++) { // internal loop
+                if (i === 0 || i === b - 1) {
+                string += "*";
+                }
+                else {
+                if (j === 0 || j === b - 1) {
+                    string += "*";
+                }
+                else {
+                    string += " &nbsp;";
+                }
+                }
+            }
+            // newline after each row
+            string += "<br>";
+            } 
+            return string;  
+        }
+        let b=5;
+        document.getElementById("pattern2").innerHTML="2. Hallow pattern <br>"+hSqPattern(b);
+
+        function ltTrPattern(c){
+            let string = "";
+            for (let i = 1; i <= c; i++) {
+            // printing spaces
+            for (let j = 0; j < c - i; j++) {
+                string += " &nbsp; ";
+            }
+            // printing star
+            for (let k = 0; k < i; k++) {
+                string += "*";
+            }
+            string += "<br>";
+            }
+            return string;
+        }
+        let c=5;
+        document.getElementById("pattern3").innerHTML="3. Left Triangle Pattern <br>"+ltTrPattern(c);
+
+        function rtTrPattern(d){
+            let string = "";
+            for (let i = 0; i < d; i++) {
+            for (let j = 0; j <= i; j++) {
+                string += "*";
+            }
+            string += "<br>";
+            }
+            return string;
+        }
+        let d = 5;
+        document.getElementById("pattern4").innerHTML="4. Right Triangle Pattern <br>"+rtTrPattern(d);
+
+        function downTrPattern(e){
+            let string = "";
+            for (let i = 0; i < e; i++) {
+            // printing star
+            for (let k = 0; k < e - i; k++) {
+                string += "*";
+            }
+            string += "<br>";
+            }
+            return string;
+        }
+        let e=5;
+        document.getElementById("pattern5").innerHTML="5. Downward Triangle <br>"+downTrPattern(e);
+
+        function hallowTrPattern(f){
+            let string = "";
+
+            for (let i = 1; i <= f; i++) {
+            // printing star
+            for (let j = 0; j < i; j++) {
+                if(i === f) {
+                string += "*";
+                }
+                else {
+                if (j == 0 || j == i - 1) {
+                    string += "*";
+                }
+                else {
+                    string += " &nbsp; ";
+                }
+                }
+            }
+            string += "<br>";
+            }
+            return string;
+        }
+        let f=6;
+        document.getElementById("pattern6").innerHTML="6. Hallow Triangle <br>"+hallowTrPattern(f);
+
+        function pyramidPattern(g){
+            let string = "";
+            // External loop
+            for (let i = 1; i <= g; i++) {
+            // printing spaces
+            for (let j = 1; j <= g-i; j++) {
+                string += " &nbsp;";
+            }
+            // printing star
+            for (let k = 0; k < 2*i - 1; k++) {
+                string += "*";
+            }
+            string += "<br>";
+            }
+            return string;
+        }
+        let g=5;
+        document.getElementById("pattern7").innerHTML="7. Pyramid Triangle <br>"+pyramidPattern(g);
+
+        function reversePattern(h){
+            let string = "";
+            // External loop
+            for (let i = 0; i < h; i++) {
+            // printing spaces
+            for (let j = 0; j < i; j++) {
+                string += "&nbsp; ";
+            }
+            // printing star
+            for (let k = 0; k < 2 * (h-i) - 1; k++) {
+                string += "*";
+            }
+            string += "<br>";
+            }
+            return string;
+        }
+        let h=5;
+        document.getElementById("pattern8").innerHTML="8. Reverse Pyramid Triangle <br>"+reversePattern(h);
+
+        function diamondPattern(l){
+            let string = "";
+
+            // Upper triangle shape
+            for (let i = 1; i <= l; i++) {
+            // printing spaces
+            for (let j = l; j > i; j--) {
+                string += " &nbsp;";
+            }
+            // printing star
+            for (let k = 0; k < i * 2 - 1; k++) {
+                string += "*";
+            }
+            string += "<br>";
+            }
+            // Lower triangle shape  
+            for (let i = 1; i <= l - 1; i++) {
+            // printing spaces
+            for (let j = 0; j < i; j++) {
+                string += " &nbsp;";
+            }
+            // printing star
+            for (let k = (l - i) * 2 - 1; k > 0; k--) {
+                string += "*";
+            }
+            string += "<br>";
+            }
+            return string;
+        }
+        let l=6;
+        document.getElementById("pattern9").innerHTML="9. Diamond Pattern <br>" + diamondPattern(l);
+
+        function hallowDiamond(m){
+            let string = "";
+
+            // Upper triangle shape
+            for (let i = 1; i <= m; i++) {
+            // printing spaces
+            for (let j = m; j > i; j--) {
+                string += " &nbsp;";
+            }
+            // printing star
+            for (let k = 0; k < i * 2 - 1; k++) {
+                if (k === 0 || k === 2 * i - 2) {
+                string += "*";
+                }
+                else {
+                string += " nbsp";
+                }
+            }
+            string += "<br>";
+            }
+
+            // Lower triangle shape  
+            for (let i = 1; i <= m - 1; i++) {
+                // printing spaces
+                for (let j = 0; j < i; j++) {
+                string += " nbsp";
+                }
+                // printing star
+                for (let k = (m - i) * 2 - 1; k >= 1; k--) {
+                if (k === 1 || k === (m - i) * 2 - 1) {
+                    string += "*";
+                }
+                else {
+                    string += " nbsp";
+                }
+                }
+                string += "<br>";
+            }
+            return string;
+        }
+        let m=6;
+        document.getElementById("pattern10").innerHTML="10. Hallow Diamond Pattern <br>"+hSqPattern(m);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        /* div{
+            background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(29,147,187,1) 35%, rgba(0,212,255,1) 100%);
+        } */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("C:/Users/hashi/Downloads/background333.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: contain;
+            
+        }
+        .menu-bar{
+
+            background-color:  rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(141,35,148,1) 35%, rgba(0,212,255,1) 100%);
+        height: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 5%;
+        position: relative;
+        margin-top: 20px;
+        
+
+}
+    
+        .menu-bar ul{
+            display: flex;
+            /* text-align: left;
+            padding: 10px; */
+            list-style-type: none;
+           
+           
+            
+        
+        }
+        .menu-bar ul li{
+            /* display:inline; */
+           /* width: 120px; */
+           padding: 10px 10px;
+           
+           /* text-align: center; */
+            position: relative;
+        }
+        .menu-bar ul li a{
+           
+            display: block;
+            text-decoration: none;
+            padding:0px;
+            display: inline-block;
+            color:white;
+            transition: all 1s;
+        }
+        .menu-bar ul li a:hover{
+            background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(141,35,148,1) 35%, rgba(0,212,255,1) 100%);
+        }
+        .fas{
+            float: right;
+            margin-left: 10px;
+            padding-top: 3px;
+        }
+        .dropdown-menu {
+             display: none;
+        }
+        .menu-bar ul li:hover .dropdown-menu{
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: rgb(211, 186, 233);
+        }
+        .menu-bar ul li:hover .dropdown-menu ul{
+            display: block;
+            margin: 10px;
+        }
+        .menu-bar ul li:hover .dropdown-menu ul li{
+            width: 150px;
+            padding: 10px;
+        }
+        .dropdown-menu-0{
+            display: none;
+        }
+
+        .dropdown-menu ul li:hover .dropdown-menu-0{
+            display: block;
+            position: absolute;
+            left: 150px;
+            top: 0;
+            background-color: rgb(201, 172, 229);
+        }
+        .dropdown-menu-1{
+            display: none;
+        }
+
+        .dropdown-menu ul li:hover .dropdown-menu-1{
+            display: block;
+            position: absolute;
+            left: 180px;
+            top: 0;
+            background-color: blueviolet;
+            
+        }
+        i{
+            padding-left: 4px;
+        }
+        .menu-bar img{
+            height: 80px;
+            margin-left: -0px;
+        }
+        .content{
+            margin-top: 400px;
+            position: absolute;
+        }
+        .content h1{
+          font-family: fantasy;
+           color: blueviolet;
+
+        }
+        .content p{
+         font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        button{
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(141,35,148,1) 35%, rgba(0,212,255,1) 100%);
+border-radius: 5px;
+            margin-top: 50%;
+            margin-left: 70px;
+            
+        }
+        button a{
+            text-decoration: none;
+            color: beige;
+            
+        }
+        input[type=search]{
+            width: 15%;
+            height: 30px;
+            border-radius: 10px;
+            margin-left: 200px;
+        }
+            
+    </style>
+</head>
+<body>
+    
+    <div  class="menu-bar">
+        <img src="C:\Users\hashi\OneDrive\Pictures\Saved Pictures\logo-removebg-preview.png">
+
+      <ul>
+        <li><a href="#">HOME<i class="fa fa-home"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="#">Kerala<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                        <ul>
+                            <li><a href="#">Thrissur</a></li>
+                            <li><a href="#">Malapuram</a></li>
+                            <li><a href="#">Kasargod</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><a href="#">Thamilnad<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Karoor</a></li>
+                                <li><a href="#">chennai</a></li>
+                                <li><a href="#">madhurai</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Delhi<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                        
+                                <ul>
+                                    <li><a href="#">shahadaru</a></li>
+                                    <li><a href="#">Newdelhi</a></li>
+                                    <li><a href="#">Southeast</a></li>
+                                </ul>
+                                </div>
+                            </li>
+
+                    <li><a href="#">Karnadaka<i class="fa fa-caret-down"></i></a>
+                         <div class="dropdown-menu-1">
+                                
+                                <ul>
+                                    <li><a href="#">Mysore</a></li>
+                                    <li><a href="#">Benguluru</a></li>
+                                    <li><a href="#">Vijayapuru</a></li>
+                                </ul>
+                                </div>
+                            </li>
+
+                    <li><a href="#">Goa<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdown-menu-1">
+                                       
+                                 <ul>
+                                   <li><a href="#">South Goa</a></li>
+                                   <li><a href="#">Margo</a></li>
+                                   <li><a href="#">Tiswadi</a></li>
+                                </ul>
+                            </div>
+                         </li>
+
+                </ul>
+            </div>
+        </li>
+    </li>
+        <li><a href="#">ABOUT<i class="fa fa-home"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="#">Dubai<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">BurDuba</a></li>
+                                <li><a href="#">Dere</a></li>
+                                <li><a href="#">Internaticity</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">AbuDhabi<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Team-1</a></li>
+                                <li><a href="#">Team-2</a></li>
+                                <li><a href="#">Team-3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Ajman<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Team-1</a></li>
+                                <li><a href="#">Team-2</a></li>
+                                <li><a href="#">Team-3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Ras Al-Khaimah<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Team-1</a></li>
+                                <li><a href="#">Team-2</a></li>
+                                <li><a href="#">Team-3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Sharjah<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Rolla</a></li>
+                                <li><a href="#">Al-Nadha</a></li>
+                                <li><a href="#">Team-3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        </li>
+         <li><a href="index.html">SOCIAL MEDIA<i class="fa fa-home"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="#">Whatsupp<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Chat</a></li>
+                                <li><a href="#">Status</a></li>
+                                <li><a href="#">Profile</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Instagram<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Chat</a></li>
+                                <li><a href="#">Story</a></li>
+                                <li><a href="#">Post</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Twiter<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Chat</a></li>
+                                <li><a href="#">Note</a></li>
+                                <li><a href="#">Promotion</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Snapchat<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Camera</a></li>
+                                <li><a href="#">Chat</a></li>
+                                <li><a href="#">Snap</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Facebook<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Chat</a></li>
+                                <li><a href="#">Post</a></li>
+                                <li><a href="#">Story</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+         <li><a href="about.html">FOOD<i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="#">Biriyani<i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="#">Chiken</a></li>
+                                    <li><a href="#">Beaf</a></li>
+                                    <li><a href="#">Pork</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Mandhi<i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="#">Chiken</a></li>
+                                    <li><a href="#">Beaf</a></li>
+                                    <li><a href="#">Mattan</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Alfam<i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="#">Spicy</a></li>
+                                    <li><a href="#">Normal</a></li>
+                                    <li><a href="#">Peri Peri</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li><a href="#">Kabab<i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="#">Chiken</a></li>
+                                    <li><a href="#">Beaf</a></li>
+                                    <li><a href="#">Mattan</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Snaks<i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="#">Alfam</a></li>
+                                    <li><a href="#">Sandwich</a></li>
+                                    <li><a href="#">Samoosa</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        </li>
+        
+         <li><a href="gallery.html">GALLERY<i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="#">University<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Calicut</a></li>
+                                <li><a href="#">Kerala</a></li>
+                                <li><a href="#">MahandhGandhi</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Flower<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Rose</a></li>
+                                <li><a href="#">Jasmin</a></li>
+                                <li><a href="#">Sunflower</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Friuts<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Mango</a></li>
+                                <li><a href="#">Apple</a></li>
+                                <li><a href="#">Jackfriuts</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Animal<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Dog</a></li>
+                                <li><a href="#">Cat</a></li>
+                                <li><a href="#">Tigger</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">School<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Convent</a></li>
+                                <li><a href="#">Boys</a></li>
+                                <li><a href="#">Girls</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        
+        <li><a href="#">ENVIORNMENT<i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="#">Page-1<i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu-1">
+                            <ul>
+                                <li><a href="#">Team-1</a></li>
+                                <li><a href="#">Team-2</a></li>
+                                <li><a href="#">Team-3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+      
+                <li><a href="#">Page-1<i class="fa fa-caret-down"></i></a>
+                    <div class="dropdown-menu-1">
+                        <ul>
+                            <li><a href="#">Team-1</a></li>
+                            <li><a href="#">Team-2</a></li>
+                            <li><a href="#">Team-3</a></li>
+                        </ul>
+                    </div>
+                </li>
+                
+                        <li><a href="#">Page-1<i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="#">Team-1</a></li>
+                                    <li><a href="#">Team-2</a></li>
+                                    <li><a href="#">Team-3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                                <li><a href="#">Page-1<i class="fa fa-caret-down"></i></a>
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="#">Team-1</a></li>
+                                            <li><a href="#">Team-2</a></li>
+                                            <li><a href="#">Team-3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                
+                                        <li><a href="#">Page-1<i class="fa fa-caret-down"></i></a>
+                                            <div class="dropdown-menu-1">
+                                                <ul>
+                                                    <li><a href="#">Team-1</a></li>
+                                                    <li><a href="#">Team-2</a></li>
+                                                    <li><a href="#">Team-3</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+        
+                  </ul>
+
+                </div>
+        </li>   
+        </ul>
+
+       <div class="content">
+        <h1>ENTERTAINMENT</h1><br>
+        <P>Politics is the entertainment branch of industry. ...<br>
+            The world is a stage, the stage is a world of entertainment. ...<br>
+            Entertainment and art are not isolated. ...<br>
+            Not necessity, not desire - no, the love of power is the demon of men. ...<br>
+            The public doesn't know what to believe anymore.</P>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+       </div>
+       
+        <button><a href="file:///C:/Users/hashi/OneDrive/Documents/html/login.html">LOGIN</a></button>
+        
+            <input type="search" placeholder="Search" name="Search"><i class="fa fa-search"></i>
+           
+            <div class="fa fa-toggle"></div>
+        <div class="footer">
+            
+            <a href="entertinement@gmail.com"></a>
+
+        </div>
+</body>
+</html>

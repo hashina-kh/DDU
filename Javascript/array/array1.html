@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="de"></h1>
+    <h1 id="d"></h1>
+    <h1 id="demo"></h1>
+    <h1 id="dem"></h1>
+    <h1 id="demo2"></h1>
+    <h1 id="demo3"></h1>
+    <h1 id="demo4"></h1>
+    <h1 id="demo5"></h1>
+    <h1 id="demo6"></h1>
+    <h1 id="demo7"></h1>
+    <h1 id="demo8"></h1>
+    <h1 id="demo9"></h1>
+    <h1 id="demo10"></h1>
+    <h1 id="demo11"></h1>
+    <h1 id="demo12"></h1>
+    <h1 id="demo13"></h1>
+    <h1 id="demo14"></h1>
+
+
+    <script>
+
+        //spice
+
+
+        const name=["orange","apple","elephent","monday","tuesdat"];
+        name.splice(2,2,"karthik","singam");
+        document.getElementById("de").innerHTML=name;
+
+        const name2=["orange","apple","elephent","monday","tuesdat"];
+        const del=name2.splice(2,3,"karthik","singam");
+        document.getElementById("d").innerHTML=del;
+
+      const nam=["orange","apple","elephent","monday","tuesdat"];
+      const slice=nam.slice(2,5);
+      document.getElementById("demo").innerHTML=slice;
+
+      const arra=["banana","apple","kiwi","mango ","jackfruit"]
+      document.getElementById("dem").innerHTML=arra.join("*");
+
+
+// pop() method removes the last element from an array:
+
+      const pop1=["orange","apple","elephent","monday","tuesdat"];
+      document.getElementById("demo2").innerHTML=pop1;
+      pop1.pop();
+      document.getElementById("demo3").innerHTML=pop1;
+
+
+//The pop() method returns the value that was "popped out":
+
+      const fruits=["orange","apple","elephent","monday","tuesdat"];
+      document.getElementById("demo4").innerHTML=fruits.pop();
+      document.getElementById("demo5").innerHTML=fruits;
+
+
+//The push() method adds a new element to an array (at the end):
+
+     const fruit=["orange","apple","elephent","monday","tuesdat"];
+     document.getElementById("demo6").innerHTML=fruit;
+     fruit.push("kiwi");
+     document.getElementById("demo7").innerHTML=fruit;
+
+//The push() method returns the new array length:
+
+    const frrit=["orange","apple","elephent","monday","tuesdat"];
+    document.getElementById("demo8").innerHTML=frrit.push();
+    document.getElementById("demo9").innerHTML=frrit;
+
+
+    //The shift() method removes the first element of an array (and "shifts" the other elements to the left):
+    const frri=["orange","apple","elephent","monday","tuesdat"];
+    document.getElementById("demo10").innerHTML=frri;
+    frri.shift();
+    document.getElementById("demo11").innerHTML=frri;
+   
+   //The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+   
+    const frrits=["orange","apple","elephent","monday","tuesdat"];
+    document.getElementById("demo10").innerHTML=frrits;
+    frrits.unshift("kiwi");
+    document.getElementById("demo11").innerHTML=frrits;
+
+
+    //The concat() method creates a new array by merging (concatenating) existing arrays:
+
+    const girl=["cilli","milli"];
+    const boys=["monu","jose"];
+    const children= girl.concat(boys);
+    document.getElementById("demo14").innerHTML=children;
+
+
+    </script>
+</body>
+</html>

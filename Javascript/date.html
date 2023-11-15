@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="date"></h1>
+    <h1 id="getdate"></h1>
+    <h1 id="day"></h1>
+    <h1 id="fullyear"></h1>
+    <h1 id="day"></h1>
+
+    <script>
+        var a=new Date();
+        var b=a.getDate();
+        var c=a.getDay();
+        var d=a.getFullYear();
+
+        document.getElementById("date").innerHTML=a;
+        document.getElementById("getdate").innerHTML=b;
+        document.getElementById("day").innerHTML=c;
+        document.getElementById("fullyear").innerHTML=d;
+
+    </script>
+</body>
+</html>

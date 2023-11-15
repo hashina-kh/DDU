@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            /* background-color: skyblue; */
+        }
+        .wheel{
+            position: absolute;
+            top: 64%;
+            left: 20%;
+            width: 200px;
+            height: 200px;
+            border: 10px solid black;
+            border-radius: 50%;
+            animation: wheel 1s linear infinite;
+            z-index: 1;
+        }
+        .wheel1{
+            position: absolute;
+            top: 64%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            border-left: 20px solid #3ACFDF;
+            border-right: 20px solid #3a4ed5;
+            border-top: 20px solid gold;
+            border-bottom: 20px solid darkgreen;
+         
+            border-radius: 50%;
+            animation: wheel 1s linear infinite;
+        }
+        @keyframes wheel{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        span{
+            position: absolute;
+            top: 46%;
+            left: 0%;
+            width: 180px;
+            height: 8px;
+            border: 10px solid darkgoldenrod;
+            border-radius: 25%;
+        }
+        span:nth-child(1){
+            transform: rotate(0deg);
+        }
+        span:nth-child(2){
+            transform: rotate(36deg);
+        }
+        span:nth-child(3){
+            transform: rotate(72deg);
+        }
+        span:nth-child(4){
+            transform: rotate(108deg);
+        }
+        span:nth-child(5){
+            transform: rotate(144deg);
+        }
+        .box{
+            width: 110%;
+            height: 70px;
+            background-color: rgb(73, 68, 63);
+            top: 90%;
+            left: -10%;
+            position: absolute;
+            z-index: -1;
+        }
+        /* #class{
+            z-index: 1;
+        } */
+        .hor{
+            margin-left: 950px;
+            margin-top: -80px;
+        }
+        .aa{
+            width: 340px;
+            height: 5px;
+            background-color: black;
+            margin-top: -290px;
+            margin-left: 850px;
+            rotate: 15deg;
+        }
+        .circle{
+            width: 300px;
+            height: 300px;
+            background-color: white;
+            border-radius: 50%;
+            margin-left: 650px;
+            margin-top: -470px;
+            
+            
+        }
+   .rect{
+    width: 470px;
+    height: 370px;
+    background-color: black;
+    margin-left: 400px;
+    margin-top: 170px;
+    z-index: 3;
+   }
+   .ab{
+    width: 188px;
+    height: 5px;
+    background-color: black;
+    margin-top: -6px;
+    margin-left: 850px;
+    rotate: 15deg;
+    
+   }
+   .ac{
+    width: 87px;
+    height: 15px;
+    background-color: black;
+    margin-top: 0px;
+    margin-left: 1148px;
+    rotate: 90deg;
+   }
+   .dri{
+    position: absolute;
+    top: 29%;
+    left: 45%;
+    z-index: 1;
+   }
+   /* #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  /* z-index: ; */
+/* } */ 
+    </style>
+</head>
+<body>
+    <div class="vdo">
+        <video src="C:\Users\hashi\Downloads\istockphoto-1412809629-640_adpp_is.mp4"   controls  id="myVideo"></video>
+    </div>
+
+    <div class="rect"></div>
+    <div class="circle"></div>
+     
+    <div class="hor">
+        <img src="C:\Users\hashi\OneDrive\Pictures\Saved Pictures\hor.png" alt="horse" style="width: 550px; ;" id="horse" >
+
+
+    </div> 
+    <div class="dri">
+    <img src="C:\Users\hashi\OneDrive\Pictures\Saved Pictures\gettyimages-1425986583-612x612-removebg-preview.png" alt="horsedriver">
+</div>
+    
+
+    <div class="aa"></div>
+    <div class="ab"></div>
+    <div class="ac"></div>
+    
+    <div class="wheel">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="wheel1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="box"></div>
+    
+</body>
+</html>

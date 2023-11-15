@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="click1" onclick="function1()">Function 1</button>
+    <button id="click2" onclick="function2()">Function 2</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+         function function1(){
+            var a="";
+            for(let k=0;k<=10;k++){
+                a+=k+" ";
+                document.getElementById("demo").innerHTML=a;
+
+            }
+        }
+
+        const numberContainer = document.getElementById('demo1');
+        function function2() {
+         numberContainer.innerHTML = '';
+        let i = 1;
+        const intervalId = setInterval(() => {
+            if (i <= 100) {
+                const numberElement = document.createElement('span');
+                numberElement.textContent = i + ' ';
+                numberContainer.appendChild(numberElement);
+                i++;
+            } else {
+                clearInterval(intervalId);
+            }
+        }, 200); 
+        }
+    </script>
+</body>
+</html>

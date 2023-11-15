@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #getData{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<script>
+    function drag(even){
+        even.dataTransfer.setData("text",even.target.id);
+
+    }
+    function allowDrop(even){
+        even.preventDefault();
+    }
+    function drop(even){
+        even.preventDefault();
+        var fetchData=even.dataTransfer.getData("text");
+        even.target.appendChild(document.getElementById(fetchData));
+    }
+</script>
+<body>
+    <div id="getData"
+    ondrop="drop(event)"
+    ondragover="allowDrop(event)">
+
+    </div>
+    <br>
+    <img id="image"
+    src="C:/Users/hashi/Downloads/driver.jpg"
+    draggable="true"
+    ondragstart="drag(event)"
+    width="150"
+    height="150">
+
+
+</body>
+</html>

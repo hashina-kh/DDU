@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="findMe" onclick="findMe()"> Where am I now?</button><br>
+    <p id="status"></p>
+    <p id="state"></p>
+    <a id="map-link" target="_blank"></a>
+
+    
+    <script>
+        function findMe(){
+            var status=document.getElementById('status');
+            var state=document.getElementById('state');
+            var mapLink =document.getElementById('map-link');
+
+            mapLink.href="";
+            mapLink.textContent="";
+
+            if(navigator.geolocation){
+                status.textContent="Loading...";
+                navigator.geolocation.getCurrentPosition(success, error);
+            }else{
+                status.textContent="browser not supported";
+            }
+            function success(events){
+                const latit=events.coords.latitude;
+                const longi=events.coords.longitude;
+
+                status.textContent=latit;
+                state.textContent=longi;
+
+                mapLink.href="https://www.google.com/maps/place/"+latit+","+longi;
+                mapLink.textContent="Hafiis company";
+            }
+            function error(events){
+                mapLink.textContent='unable to retrive your location';
+            }
+        }
+    </script>
+</body>
+</html>

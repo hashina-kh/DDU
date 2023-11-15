@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-1{
+            height:100px;
+            width: 100px;
+            border-radius: 150px;
+            background-color:rgb(123, 28, 130);
+            animation-name: sample;
+            animation-duration: 5s;
+            position: relative;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+           
+
+        }
+
+        @keyframes sample{
+            0%{
+                background-color: black;
+                left: 0px;
+                transform: rotate(50deg);
+            }
+            25%{
+                background-color: violet;
+                left: 200px;
+                top: 300px;
+            }
+            60%{
+                background-color: brown;
+                top: 0px;
+                left: 500px;
+            }
+            85%{
+                background-color: rgb(42, 71, 165);
+                top: 0px;
+                left: 0px;
+            }
+            100%{
+                background-color: rgb(34, 180, 58);
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div-1">
+
+    </div>
+
+
+</body>
+</html>

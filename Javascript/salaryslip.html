@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    .div{
+        border: 2px solid black;
+        height: 700px;
+        width: 400px;
+       
+      
+    }
+    .div-1{
+        border: 2px solid black;
+        height: 700px;
+        width: 400px;
+        margin-top: 20px;
+        
+    } 
+    form{
+        padding: 30px;
+    }
+    form input{
+        width: 300px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+     
+
+ </style>
+</head>
+<body>
+    <h1>salary</h1>
+    <div class="div">
+        <form method="post" name="form1">
+            <label>Employee Name</label><br>
+            <input type="text" name="name" id="name"><br>
+            <label>Employee Id</label><br>
+            <input type="number" name="Id" id="Id"><br>
+            <label>Basic salary</label><br>
+            <input type="number" name="basic" id="basic"><br>
+            <label>House Rent Allowance</label><br>
+            <input type="number" name="house" id="house"><br>
+            <label>Special Allowance</label><br>
+            <input type="number" name="special" id="special"><br>
+            <label>Conveyance Allowance</label><br>
+            <input type="number" name="conveyance" id="conveyance"><br>
+            <label>Medical Allowance</label><br>
+            <input type="number" name="medical" id="medical" onchange="grossalary()"><br>
+            <label>Gross salary</label><br>
+            <input type="number" name="gross" id="gross" readonly><br>
+        </div>      
+            <div class="div-1">
+                <form method="post" name="form2">
+                    <label>EPF</label><br>
+                    <input type="number" name="EPF" id="EPF"><br>
+                    <label>Health Insurance</label><br>
+                    <input type="number" name="health" id="insurance"><br>
+                    <label>Professional tax</label><br>
+                    <input type="number" name="Professional" id="tax" onchange="salary()"><br>
+                    <label>Total deducation</label><br>
+                    <input type="number" name="total" id="total"><br>
+                    <label>Net Pay</label><br>
+                    <input type="number" name="net" id="net"><br>
+                    
+
+        </form>
+    </div>
+    </form>
+    <script>
+        function grossalary(){
+            let a,b,c,d,e,f;
+
+            a=parseInt(document.getElementById("basic").value);
+            b=parseInt(document.getElementById("house").value);
+            c=parseInt(document.getElementById("special").value);
+            d=parseInt(document.getElementById("conveyance").value);
+            e=parseInt(document.getElementById("medical").value);
+            f=a+b+c+d+e;
+            document.getElementById("gross").value=f;
+        }
+
+        function salary(){
+            let g,h,i,f,t,n;
+            g=parseInt(document.getElementById("EPF").value);
+            h=parseInt(document.getElementById("insurance").value);
+            i=parseInt(document.getElementById("tax").value);
+            f=parseInt(document.getElementById("gross").value);
+            
+            t=g+h+i;
+            n=f-t;
+            document.getElementById("total").value=t;
+            document.getElementById("net").value=n;
+        }
+    </script>
+</body>
+</html>
